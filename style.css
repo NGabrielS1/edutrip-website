@@ -1,0 +1,551 @@
+/* Fonts */
+@font-face {
+  font-family: "Arsenal";
+  src: url(../assets/Arsenal-Regular.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Arsenal";
+  src: url(../assets/Arsenal-Bold.ttf);
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Arsenal";
+  src: url(../assets/Arsenal-Italic.ttf);
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Arsenal";
+  src: url(../assets/Arsenal-BoldItalic.ttf);
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url(../assets/Lato-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Horizon";
+  src: url("../assets/Horizon.otf") format("opentype");
+}
+
+/* Base CSS */
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Arsenal", Tahoma, sans-serif;
+  line-height: 1.7;
+}
+
+h1,
+h2,
+h3,
+p,
+a {
+  color: #000000;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  display: inline-block;
+  font-size: 1rem;
+  font-family: "Lato";
+  color: white;
+  background-color: #262f55;
+  border-radius: 25px;
+  padding: 15px 25px;
+  border: none;
+  cursor: pointer;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  padding: 0 2rem;
+  overflow: hidden;
+}
+
+.container #banner {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 2rem;
+}
+
+.container p {
+  position: relative;
+  text-align: justify;
+  font-size: 1.5rem;
+  width: 100%;
+}
+
+.left {
+  width: 50%;
+  float: left;
+}
+
+.right {
+  width: 50%;
+  float: right;
+}
+
+.clear {
+  clear: both;
+}
+
+.bottom-spacer {
+  padding-bottom: 1.5rem;
+}
+
+.top-spacer {
+  padding-top: 1.5rem;
+}
+
+.left-spacer {
+  padding-left: 1.5rem;
+}
+
+
+/* Navigation Bar */
+#navbar {
+  width: 100vw;
+  height: 15vh;
+  display: block;
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  transition: top 0.8s;
+}
+
+.bright-shade {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0) 80%);
+}
+
+.dark-shade {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 80%);
+}
+
+#navbar .logo {
+  height: 100%;
+  aspect-ratio: 1/1;
+  padding: 1rem 0 0 1rem;
+  object-fit: contain;
+  float: left;
+  display: block;
+  position: absolute;
+}
+
+#navbar ul {
+  list-style-type: none;
+  float: right;
+  height: 100%;
+  width: 100%;
+  padding-left: 10vw;
+}
+
+#navbar ul li {
+  float: left;
+  height: 100%;
+  padding-left: 6vw;
+}
+
+#navbar ul li a {
+  height: 100%;
+  font-size: 1.5rem;
+  display: block;
+  padding-top: 2.5rem;
+  text-align: center;
+}
+
+#navbar.light-nav ul li a {
+  color: #ffffff;
+}
+
+#navbar ul li a.current {
+  text-decoration: underline;
+}
+
+/* Home page */
+#home-info {
+  background: url("../assets/home-bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  padding-top: 16vh;
+  position: relative;
+}
+
+#home-info div {
+  position: absolute;
+  display: block;
+  width: 25vw;
+  left: 52vw;
+}
+
+#home-info div h1 {
+  font-weight: normal;
+  font-size: 3rem;
+}
+
+#home-info div p {
+  font-size: 1rem;
+  padding-left: 1rem;
+}
+
+#home-info div a.btn {
+  margin-left: 5.5rem;
+  margin-top: 1rem;
+}
+
+/* Activitiy */
+#activity-info {
+  background-image: url("../assets/activity-bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100vw;
+  padding-top: 15vh;
+  position: relative;
+}
+
+#activity-info h1 {
+  text-align: center;
+  margin: 0 auto;
+  font-size: 3rem;
+  font-family: "Horizon";
+}
+
+#activity-info .video-div {
+  position: relative;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1711/650;
+}
+
+#activity-info .video-div img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  aspect-ratio: 1711/650;
+  object-fit: cover;
+  pointer-events: none;
+  z-index: 3;
+}
+
+#activity-info .video-div video {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  z-index: 2;
+}
+
+#side1 {
+  width: 40%;
+  object-fit: contain;
+  aspect-ratio: 430/530;
+}
+
+#side2 {
+  width: 60%;
+}
+
+#side2 img {
+  width: 100%;
+  object-fit: contain;
+}
+
+/* Culinary */
+#culinary-info {
+  background: url("../assets/table-bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  padding-top: 16vh;
+  position: relative;
+}
+
+#culinary-info #banner-dish {
+  font-size: 3rem;
+  color: white;
+  text-align: center;
+  margin: auto;
+  position: fixed;
+  text-align: center;
+  width: 100vw;
+  top: 15vh;
+  left: 0;
+}
+
+.back-btn {
+  position: fixed;
+  left: 1rem;
+  bottom: 1rem;
+  aspect-ratio: 1/1;
+  object-fit: contain;
+  height: 5rem;
+  cursor: pointer;
+}
+
+.table-row {
+  height: 40vh;
+  text-align: center;
+  margin: auto;
+  position: relative;
+}
+
+.table-row img {
+  height: 100%;
+  display: inline-block;
+  object-fit: contain;
+  text-align: center;
+  cursor: pointer;
+}
+
+.table-row#row1 img {
+  margin-left: -3rem;
+}
+
+.table-row#row2 img {
+  margin-left: -4.9rem;
+}
+
+.table-row img.left-most {
+  margin-left: 0;
+  padding-left: 2rem;
+}
+
+#dining-table {
+  height: 80vh;
+  text-align: center;
+  margin: auto;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#dining-table #main-dish {
+  height: 90%;
+  display: inline-block;
+  object-fit: contain;
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 70%);
+  border-radius: 25px;
+}
+
+#dining-table #side-dish {
+  height: 90%;
+  display: inline-block;
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 70%);
+  object-fit: contain;
+  padding-top: 10vh;
+}
+
+#dining-table #info-plate {
+  height: 100%;
+  aspect-ratio: 1/1;
+  display: inline-block;
+  background: url("../assets/plate.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  container-type: inline-size;
+}
+
+#info-plate #info-food {
+  text-align: center;
+  font-size: 3.5cqw;
+  padding-top: 20%;
+  margin: auto;
+  width: 70%;
+}
+
+/* Destination */
+#tourist-info {
+  background-color: #000000;
+  height: 100vh;
+  width: 100vw;
+  padding-top: 16vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#gallery {
+  height: 85%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#gallery .row {
+  width: 100%;
+  height: calc(100%/3 - 1rem);
+  display: block;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 1rem;
+}
+
+#gallery img {
+  display: inline-block;
+  border-radius: 25px;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+}
+
+#gallery .row div {
+  border-radius: 25px;
+  flex-grow: 1;
+  display: inline-block;
+}
+
+#gallery .row div h2{
+  color: white;
+  font-family: "Arsenal";
+  font-size: 2.5rem;
+  text-align: center;
+  font-weight: normal;
+  line-height: 1;
+}
+
+#gallery .row div p{
+  color: white;
+  font-family: "Arsenal";
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+#gallery .row div button{
+  color: #06286c;
+  background-color: #c5dcff;
+  border-radius: 50px;
+  font-family: "Arsenal";
+  font-size: 1.5rem;
+  text-align: center;
+  display: block;
+  width: 30%;
+  margin: auto;
+}
+
+ /* Pop ups */
+ #bg-darken {
+  /* flex to show */
+  display: none; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.5);
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+ }
+ 
+ #popup-image {
+  object-fit: contain;
+  height: 70vh;
+  z-index: 1000;
+ }
+
+ #back, #next {
+  height: 4rem;
+  width: 4rem;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+  border: none;
+  background-color: #262f55;
+  color: white;
+  font-family: "Lato";
+  font-size: 3rem;
+ }
+
+ /* Destination */
+#contact-info {
+  background: url("../assets/contact-bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  padding-top: 24vh;
+  position: relative;
+}
+
+#contact-info div {
+  background-color: whitesmoke;
+  width: 50vw;
+  text-align: center;
+  margin: auto;
+  display: block;
+  padding: 2rem 2rem 4rem 2rem;
+  box-shadow: 0.1rem 0.1rem 5px 12px rgba(0, 0, 0, 0.324);
+}
+
+#contact-info h1 {
+  text-align: left;
+  font-family: "Horizon";
+  font-size: 2.5rem;
+}
+
+#contact-info label {
+  float: left;
+  margin-bottom: 0.5rem;
+  font-family: "Arsenal";
+  font-size: 1.5rem;
+  width: 40%;
+  text-align: left;
+  line-height: 1.2;
+}
+#contact-info input {
+  float: right;
+  text-align: left;
+  font-family: "Arsenal";
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  width: 60%;
+  line-height: 1.2;
+}
+#contact-info textarea {
+  display: block;
+  font-family: "Arsenal";
+  font-size: 1.5rem;
+  line-height: 1.2;
+  text-align: left;
+  width: 100%;
+  height: 10rem;
+}
+#contact-info button {
+  display: block;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  width: 100%;
+  height: 10%;
+}

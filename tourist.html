@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Add metatag for description and keywords -->
+    <meta name="description" content="Santa Laurensia's 2026 Edutrip">
+    <meta name="keywords" content="edutrip, japan, japan edutrip, santa laurensia, edutrip 2026">
+    <script src="https://kit.fontawesome.com/f712955866.js" crossorigin="anonymous"></script>
+
+    <!-- Link to style.css file inside css folder -->
+    <link rel="stylesheet" href="style.css">
+    <link href="mobile.css" rel="stylesheet" media="screen and (max-width: 768px)">
+
+    <!-- Set title as "Hotel BT | Welcome" -->
+    <title>Edutrip 2026 | Destinations</title>
+
+</head>
+
+<body>
+    <header>
+        <!-- add id of navbar to nav element  -->
+        <nav id="navbar" class="light-nav">
+            <!-- add class of logo to h1 element -->
+            <img class="logo" src="./assets/logo.png">
+            <ul>
+                <!-- Add index.html, about.html and contact.html as links inside list items-->
+                <li><a href="index.html">Home page</a></li>
+                <li><a href="activity.html">Activity directory</a></li>
+                <li><a href="culinary.html">Culinary delicacies</a></li>
+                <li><a class="current" href="tourist.html">Tourist Destination</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="tourist-info">
+        <div id="gallery">
+            <div class="row">
+                <img src="./assets/gallery/1.JPG">
+                <img src="./assets/gallery/2.JPG">
+                <img src="./assets/gallery/3.JPG">
+                <img src="./assets/gallery/4.JPG">
+                <img src="./assets/gallery/5.JPG">
+                <img src="./assets/gallery/6.JPG">
+                <img src="./assets/gallery/7.JPG">
+            </div>
+            <div class="row">
+                <img src="./assets/gallery/8.JPG">
+                <img src="./assets/gallery/9.JPG">
+                <div>
+                    <h2>Photo Gallery</h2>
+                    <p>tourist destinations</p>
+                    <button class="btn" onclick="imageGallery()">start</button>
+                </div>
+                <img src="./assets/gallery/10.JPG">
+                <img src="./assets/gallery/11.JPG">
+            </div>
+            <div class="row">
+                <img src="./assets/gallery/12.JPG">
+                <img src="./assets/gallery/13.JPG">
+                <img src="./assets/gallery/14.JPG">
+                <img src="./assets/gallery/15.JPG">
+                <img src="./assets/gallery/16.JPG">
+                <img src="./assets/gallery/17.JPG">
+                <img src="./assets/gallery/18.JPG">
+            </div>
+        </div>
+        <div id="bg-darken" onclick="closeGallery()">
+            <button id="back" onclick="lastImage()"><</button>
+            <img id="popup-image" src="./assets/gallery/1.JPG">
+            <button id="next" onclick="nextImage()">></button>
+        </div>
+    </section>
+    <script src="script.js"></script>
+    <script>
+        let bg_blur = document.getElementById("bg-darken");
+        let gallery_image = document.getElementById("popup-image");
+        let backbtn = document.getElementById("back");
+        let nextbtn = document.getElementById("next");
+        let current_img = 0;
+        let total = 18;
+        function imageGallery() {
+            bg_blur.style.display = "flex";
+            current_img = 0;
+            chooseImage()
+        }
+        function nextImage(){
+            current_img = (current_img + 1) % total
+            chooseImage()
+        }
+        function lastImage() {
+            current_img = (current_img - 1 + total) % total;
+            chooseImage()
+        }
+        function chooseImage() {
+            gallery_image.src = `./assets/gallery/${current_img+1}.JPG`;
+        }
+        function closeGallery() {
+            if (!gallery_image.contains(event.target) && !backbtn.contains(event.target) && !nextbtn.contains(event.target)) {
+                bg_blur.style.display = "none";
+            }
+        };
+    </script>
+</body>
+
+</html>

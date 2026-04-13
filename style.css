@@ -34,7 +34,12 @@
 
 @font-face {
   font-family: "Horizon";
-  src: url("../assets/Horizon.otf") format("opentype");
+  src: url(../assets/Horizon.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "Archivo";
+  src: url(../assets/Archivo.ttf);
 }
 
 /* Base CSS */

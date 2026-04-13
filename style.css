@@ -189,7 +189,7 @@ a {
 
 /* Home page */
 #home-info {
-  background: url("./assets/home-bg.png");
+  background: url("assets/home-bg.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

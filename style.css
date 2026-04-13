@@ -1,45 +1,45 @@
 /* Fonts */
 @font-face {
   font-family: "Arsenal";
-  src: url(../assets/Arsenal-Regular.ttf);
+  src: url(assets/Arsenal-Regular.ttf);
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Arsenal";
-  src: url(../assets/Arsenal-Bold.ttf);
+  src: url(assets/Arsenal-Bold.ttf);
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Arsenal";
-  src: url(../assets/Arsenal-Italic.ttf);
+  src: url(assets/Arsenal-Italic.ttf);
   font-weight: normal;
   font-style: italic;
 }
 
 @font-face {
   font-family: "Arsenal";
-  src: url(../assets/Arsenal-BoldItalic.ttf);
+  src: url(assets/Arsenal-BoldItalic.ttf);
   font-weight: bold;
   font-style: italic;
 }
 
 @font-face {
   font-family: "Lato";
-  src: url(../assets/Lato-Regular.ttf);
+  src: url(assets/Lato-Regular.ttf);
 }
 
 @font-face {
   font-family: "Horizon";
-  src: url(../assets/Horizon.otf) format("opentype");
+  src: url(assets/Horizon.otf) format("opentype");
 }
 
 @font-face {
   font-family: "Archivo";
-  src: url(../assets/Archivo.ttf);
+  src: url(assets/Archivo.ttf);
 }
 
 /* Base CSS */
@@ -223,7 +223,7 @@ a {
 
 /* Activitiy */
 #activity-info {
-  background-image: url("../assets/activity-bg.png");
+  background-image: url("assets/activity-bg.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -283,7 +283,7 @@ a {
 
 /* Culinary */
 #culinary-info {
-  background: url("../assets/table-bg.png");
+  background: url("assets/table-bg.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -373,7 +373,7 @@ a {
   height: 100%;
   aspect-ratio: 1/1;
   display: inline-block;
-  background: url("../assets/plate.png");
+  background: url("assets/plate.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -494,7 +494,7 @@ a {
 
  /* Destination */
 #contact-info {
-  background: url("../assets/contact-bg.png");
+  background: url("assets/contact-bg.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

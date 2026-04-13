@@ -532,7 +532,7 @@ a {
   position: relative;
 }
 
-#contact-info div {
+#contact-info form {
   background-color: whitesmoke;
   width: 50vw;
   text-align: center;
